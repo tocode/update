@@ -1,3 +1,5 @@
-hahah
-
-fasjfo
+std::string url = "https://raw.github.com/samuele3hu/AssetsManagerTest/master/package.zip"; //"file:///d:/x.go";
+	std::string filename = split_filename(url);
+	std::string local_path = FileUtils::getInstance()->getWritablePath();
+	download(url, local_path, filename);
+	uncompress(local_path, filename);
